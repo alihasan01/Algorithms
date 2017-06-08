@@ -1,0 +1,5 @@
+    Problem1.  Is Unique: Implement an algorithm to determine if a string has all unique characters?
+	             In this problem we have to identify in a string either repetitive characters are present in a string or not.
+	             If such repetitive characters are present we return false else if we have all unique characters in string then we return true. 
+	             "Ali" have all unique characters so return true. "Hasan" don't have all unique characters so return false. 
+               Test cases are also present to check the actual and expected solution. 
