@@ -1,0 +1,4 @@
+1.2) Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
+In this problem we have to check that either two strings have the same all same characters or not.
+For example ali and ila, one string is permutation to other because two strings have equal length and same characters.
+We are assuming that Ali and ali are not permutation of each other because A and a are not same characters. 
