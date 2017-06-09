@@ -1,0 +1,8 @@
+Palindrome Permutation: Given a string, write a function to check if it is a permutation of
+a palindrome. A palindrome is a word or phrase that is the same forwards and backwards. A
+permutation is a rearrangement of letters. The palindrome does not need to be limited to just
+dictionary words.
+
+For the solution of problem we have to count number of characters in string which are odd number of times.
+Example abbcc. In this string we have a = 1 , b = 2 and c = 2. Means only 1 character comes in odd number of times which is "a".
+If in a given string we have only 1 or less than 1 odd count then we have palindrome which is permutation otherwise not.
