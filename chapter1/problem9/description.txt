@@ -1,0 +1,6 @@
+1.9 String Rotation: Assume you have a method i5Substring which checks ifone word is a substring
+  	of another. Given two strings, 51 and 52, write code to check if 52 is a rotation of 51 using only one
+  	call to isSubstring
+	
+In this problem we concatenate first string by itself and check that either it contains other string or not.
+If contains then it means it rotate otherwise not.
