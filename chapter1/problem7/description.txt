@@ -1,0 +1,7 @@
+1.7 Rotate Matrix: Given an image represented by an NxN matrix, where each pixel in the image is 4
+bytes, write a method to rotate the image by 90 degrees.	
+This problem can solved by rotate operations 
+Top row replaced by left part of matrix
+left part can be replaced by bottom
+Bottom part can be replaced by right part.
+and at the right part again with top
