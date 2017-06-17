@@ -1,0 +1,6 @@
+2.1Remove Dups: Write code to remove duplicates from an unsorted linked list.
+there are two solutions of this problem in first we simply use a hash table and store data values in it.
+if the duplicate occurs we cant save it.
+
+In second solution we iterate the whole linked list.
+if duplicate found then we move to the link of next node and skip that duplicate value..
