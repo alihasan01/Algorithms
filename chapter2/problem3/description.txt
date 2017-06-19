@@ -1,0 +1,5 @@
+2.3 Delete Middle Node: Implement an algorithm to delete a node in the middle 
+In this solution what I have done is, take middle node in the function.
+1. Take temporary node assign middle.next to that temporary node.
+2. Assign  tmp.data to middle.data . Its mean we are assigning the data value of next to middle node to middle node.
+3. Assigning middle.next to tmp.next it will do the job for maintaining link. Skip the useless node(node o be deleted)
