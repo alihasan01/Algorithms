@@ -17,36 +17,42 @@ public class RemoveDuplicateTest {
 		node head = obj1.buildList(); //List has element 112233445
 		obj1.print(head);
 	    obj1.removeDuplicate1(head);
-		String expected = "";
-		node current = head;
-		while(current != null)
-		{
-			expected = expected + current.data;
-			current = current.next;
-		}
-		assertEquals(expected , "12345");
-		assertNotEquals(expected,"");
-		assertNotEquals(expected,"12345678900976431");
-		assertNotEquals(expected,null);
+		String expected = geExpectedtResult(head);
+		String actual = "12345";
+		assertEquals(expected , actual);
 		
-		obj1 = new List();
-		head = obj1.buildList1(); //List has element 12345
+		head = obj1.buildList1("");           //In builtList1 I am passing string to test list.
+		expected = geExpectedtResult(head);   //String contain any values to built list.
+		actual =  null;                       //In builtlist1 function I get character by character value and store in nodes.
+		assertEquals(expected,actual);
+		
+		head = obj1.buildList1(null);         
+		expected = geExpectedtResult(head);   
+		actual =  null;
+		assertEquals(expected,null);
+		
+		head = obj1.buildList1("1234567"); //List has element 12345
 		obj1.print(head);
 	    obj1.removeDuplicate1(head);
-	    expected = "";
-		current = head;
-		while(current != null)
-		{
-			expected = expected + current.data;
-			current = current.next;
-		}
-		assertEquals(expected , "12345");
-		assertNotEquals(expected,"");
-		assertNotEquals(expected,"12345678900976431");
-		assertNotEquals(expected,null);
+	    expected = geExpectedtResult(head);
+	    actual = "1234567";
+		assertEquals(expected , actual);
 		
 		//return first;
 	}
+	public String geExpectedtResult(node head)
+	{
+		if (head == null)
+			return null;
+	    String expected = "";
+	    node current = head;
+		while(current != null)
+		{
+			expected = expected + current.data;
+			current = current.next;
+		}
+		return expected;
 	
+	}
 
 }
