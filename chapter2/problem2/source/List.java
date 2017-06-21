@@ -2,6 +2,8 @@ package chapter2.problem2.source;
 
 import java.util.Scanner;
 
+import chapter2.problem2.source.node;
+
 public class List
 {
 	public node buildList() //We are building linked list here.Forward building
@@ -28,7 +30,36 @@ public class List
 			i++;
 		}
 		return first;
-		
+	}
+	public node buildList1(String str) //We are building linked list here.Forward building
+	{
+		if (str == "" || str == null)
+			return null;
+		node newnode , first , last;
+		last = new node();
+		first = null;
+		int i = 0;
+		int n = str.length();
+		while(n != 0)
+		{
+			newnode = new node();
+			char ch = str.charAt(i);
+			newnode.data = Character.getNumericValue(ch) ;
+			newnode.next = null;
+			if (first  == null)
+			{
+				first = newnode;
+				last = newnode;
+			}
+			else
+			{
+				last.next = newnode;
+				last = newnode;
+			}
+			n--;
+			i++;
+		}
+		return first;	
 	}
 	public void print(node head) //Printing linked list
 	{
