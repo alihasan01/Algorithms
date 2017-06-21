@@ -15,37 +15,61 @@ public class ReturnTokListTest {
 		node head = obj1.buildList(); //List has element 112233445
 		obj1.print(head);
 		node ans = obj1.iterativeSolution(head, 3); //List has element 1,2,3,4,5,6,7,8,9
-		String expected = "";
-		node current = ans;
+		String expected = geExpectedtResult(ans);
 		String actual = "789";
-		while(current != null)
-		{
-			expected = expected + current.data;
-			current = current.next;
-		}
-		System.out.println(expected);
 		assertEquals(expected , actual);
-		assertNotEquals(expected,"");
-		assertNotEquals(expected,"12345678900976431");
-		assertNotEquals(expected,null);
 		
-		obj1 = new List();
-		head = obj1.buildList(); //List has element 12345
-		obj1.print(head);
-		ans = obj1.iterativeSolution(head, 5);
-	    expected = "";
-		current = ans;
+		head = obj1.buildList1("123456789");
+		ans = obj1.iterativeSolution(head, 5); 
+		expected = geExpectedtResult(ans);
 		actual = "56789";
-		while(current != null)
-		{
-			expected = expected + current.data;
-			current = current.next;
-		}
-		assertEquals(expected , actual);
-		assertNotEquals(expected,"");
-		assertNotEquals(expected,"12345678900976431");
-		assertNotEquals(expected,null);
+		assertEquals(expected,actual);
+		
+		head = obj1.buildList1("");
+		ans = obj1.iterativeSolution(head, 5); 
+		expected = geExpectedtResult(ans);
+		actual = null;
+		assertEquals(expected,actual);
+		
+		head = obj1.buildList1(null);
+		ans = obj1.iterativeSolution(head, 5); 
+		expected = geExpectedtResult(ans);
+		actual = null;
+		assertEquals(expected,null);
+		
+		head = obj1.buildList1("12345");
+		ans = obj1.iterativeSolution(head, 0); 
+		expected = geExpectedtResult(ans);
+		actual = null;
+		assertEquals(expected,actual);
+		
+		head = obj1.buildList1("12345");
+		ans = obj1.iterativeSolution(head, 5); 
+		expected = geExpectedtResult(ans);
+		actual = "12345";
+		assertEquals(expected,actual);
+
+		head = obj1.buildList1("12345");
+		ans = obj1.iterativeSolution(head, 6); 
+		expected = geExpectedtResult(ans);
+		System.out.println(expected);
+		actual = null;
+		assertEquals(expected,actual);
 		
 	}
+	public String geExpectedtResult(node head)
+	{
+		if (head == null)
+			return null;
+	    String expected = "";
+	    node current = head;
+		while(current != null)
+		{
+			expected = expected + current.data;
+			current = current.next;
+		}
+		return expected;	
+	}
+
 
 }
